@@ -10,6 +10,8 @@
     
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <!-- fa icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     
@@ -27,13 +29,13 @@
                 <img src="./assets/img/background.jpg" alt="" class="background-img">
                 
                 <div class="navbar">
-                    <div class="grid navbar--grid">
-                        <div class="grid__row">
+                    <div class="grid wide navbar--grid">
+                        <div class="row navbar--wrap">
                             <a href="" class="navbar__logo-link">
                                 <img src="./assets/img/homelogo.png" alt="" class="navbar__logo-img">
                             </a>
         
-                            <ul class="navbar__list">
+                            <ul class="navbar__list hide-on-tablet-mobile">
                                 <li class="navbar__item">
                                     <a href="" class="navbar__item-link">HOME</a>
                                 </li>
@@ -413,78 +415,221 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <div class="btn btn-purple">
+                            <div class="btn btn-purple hide-on-tablet-mobile">
                                 <span>BOOK NOW</span>
                             </div>
         
-                            <div class="navbar__option">
+                            <label for="option-checkbox" class="navbar__option">
                                 <i class="ti-align-justify navbar__option-icon"></i>
+                            </label>
+
+                            <input type="checkbox" hidden class="navbar__option-checkbox" id="option-checkbox">
+
+                            <div class="navbar__option-list">
+                                <div class="navbar__option-list-content">
+                                    <div class="navbar__option-close-container">
+                                        <label for="option-checkbox" class="navbar__option-close">
+                                            <i class="ti-close navbar__option-close-icon"></i>
+                                        </label>
+                                    </div>
+                                    <div class="navbar__option-text">
+                                        <span class="navbar__option-text-sub">BEST</span>
+                                        <div class="navbar__option-text-main">PACKAGES</div>
+                                    </div>
+                                    <div class="navbar__option-destination">
+                                        <div class="navbar__option-destination-photo">
+                                            <img src="./assets/img/package1.jpg" alt="" class="navbar__option-destination-img">
+                                        </div>
+                                        <div class="navbar__option-destination-detail">
+                                            <span class="navbar__option-destination-nation">Berlin</span>
+                                            <div class="navbar__option-destination-area">
+                                                <i class="navbar__option-destination-area-icon ti-location-pin"></i>
+                                                <span class="navbar__option-destination-area-text">Europe</span>
+                                            </div>
+                                            <div class="btn navbar__option-destination-btn">FROM 700$</div>
+                                        </div>
+                                    </div>
+                                    <div class="navbar__option-destination">
+                                        <div class="navbar__option-destination-photo">
+                                            <img src="./assets/img/package2.jpg" alt="" class="navbar__option-destination-img">
+                                        </div>
+                                        <div class="navbar__option-destination-detail">
+                                            <span class="navbar__option-destination-nation">Hong Kong</span>
+                                            <div class="navbar__option-destination-area">
+                                                <i class="navbar__option-destination-area-icon ti-location-pin"></i>
+                                                <span class="navbar__option-destination-area-text">Asia</span>
+                                            </div>
+                                            <div style="background: linear-gradient(to right, #f76570 0%, #f78d65 100%);" class="btn navbar__option-destination-btn">FROM 500$</div>
+                                        </div>
+                                    </div>
+                                    <div class="navbar__option-destination">
+                                        <div class="navbar__option-destination-photo">
+                                            <img src="./assets/img/package3.jpg" alt="" class="navbar__option-destination-img">
+                                        </div>
+                                        <div class="navbar__option-destination-detail">
+                                            <span class="navbar__option-destination-nation">San Francisco</span>
+                                            <div class="navbar__option-destination-area">
+                                                <i class="navbar__option-destination-area-icon ti-location-pin"></i>
+                                                <span class="navbar__option-destination-area-text">United States</span>
+                                            </div>
+                                            <div style="background: linear-gradient(to right, #ba71da 0%, #da717b 100%);" class="btn navbar__option-destination-btn">FROM 400$</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="navbar__option-destination-child">
+                                        <div class="destination-child ">
+                                            <div class="destination-container">
+                                                <div style="background-image: url(./assets/img/destination-1.jpg);" class="destination-item__background">
+                                                    <div class="destination-item">
+                                                        <div class="destination-item__text">
+                                                            <div class="destination-item__name">Europe</div>
+                                                            <div class="destination-item__package">3 PACKAGES</div>
+                                                        </div>
+                                                        <div class="destination-item__icon">
+                                                            <img src="./assets/img/destination_icon1.png" alt="" class="destination-item__icon-img">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="destination-container__hover">
+                                                    <div  class="destination-item__hover">
+                                                        <div class="destination-item__hover-heading">
+                                                            <span>Packages</span>
+                                                        </div>
+                                                        <ul class="destination-item__hover-list">
+                                                            <li class="destination-item__hover-item">
+                                                                <a href="" class="destination-item__hover-item-link">Berlin</a>
+                                                            </li>
+                                                            <li class="destination-item__hover-item">
+                                                                <a href="" class="destination-item__hover-item-link">Amsterdam</a>
+                                                            </li>
+                                                            <li class="destination-item__hover-item">
+                                                                <a href="" class="destination-item__hover-item-link">Tuscany</a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="btn destination-item__hover-view">
+                                                            <span class="destination-item__hover-view-text">VIEW DESTINATION</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="navbar__option-text">
+                                        <span class="navbar__option-text-sub">LAST</span>
+                                        <div class="navbar__option-text-main-bottom">MINUTES</div>
+                                    </div>
+                                    <div class="navbar__option-destination">
+                                        <div class="navbar__option-destination-photo">
+                                            <img src="./assets/img/package4.jpg" alt="" class="navbar__option-destination-img">
+                                        </div>
+                                        <div class="navbar__option-destination-detail">
+                                            <span class="navbar__option-destination-nation">Tuscany</span>
+                                            <div class="navbar__option-destination-area">
+                                                <i class="navbar__option-destination-area-icon ti-location-pin"></i>
+                                                <span class="navbar__option-destination-area-text">Italy</span>
+                                            </div>
+                                            <div style="background: linear-gradient(to right, #1bbc9b 0%, #1bbc63 100%);" class="btn navbar__option-destination-btn">FROM 730$</div>
+                                        </div>
+                                    </div>
+                                    <div class="navbar__option-destination">
+                                        <div class="navbar__option-destination-photo">
+                                            <img src="./assets/img/package5.jpg" alt="" class="navbar__option-destination-img">
+                                        </div>
+                                        <div class="navbar__option-destination-detail">
+                                            <span class="navbar__option-destination-nation">Amsterdam</span>
+                                            <div class="navbar__option-destination-area">
+                                                <i class="navbar__option-destination-area-icon ti-location-pin"></i>
+                                                <span class="navbar__option-destination-area-text">Netherlands</span>
+                                            </div>
+                                            <div style="background: linear-gradient(to right, #f3a46b 0%, #f3c96b 100%);" class="btn navbar__option-destination-btn">FROM 1500$</div>
+                                        </div>
+                                    </div>
+                                    <div class="navbar__option-destination">
+                                        <div class="navbar__option-destination-photo">
+                                            <img src="./assets/img/package6.jpg" alt="" class="navbar__option-destination-img">
+                                        </div>
+                                        <div class="navbar__option-destination-detail">
+                                            <span class="navbar__option-destination-nation">Phuket</span>
+                                            <div class="navbar__option-destination-area">
+                                                <i class="navbar__option-destination-area-icon ti-location-pin"></i>
+                                                <span class="navbar__option-destination-area-text">Thailandia</span>
+                                            </div>
+                                            <div style="background: linear-gradient(to right, #14b9d5 0%, #14d5b1 100%);" class="btn navbar__option-destination-btn">FROM 1200$</div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="grid slide-content">
-                    <div class="slider">
-                        <div class="slider-main-title">
-                            <span class="slider-main-title__text">Search your next Holida</span>
-                            <span class="slider-main-title__text-addition">y</span>
-                        </div>
-                        <div class="slider-sub-title">
-                            <span class="slider-sub-title__text">CHECK OUR BEST PROMOTIONS</span>
-                        </div>
-                        <div class="slider-search">
-                            <div class="slider-search__container">
-                                <label for="slider-search__checkbox" class="slider-search__container-child">
-                                    <span class="slider-search__text">Choose your Destination ...</span>
-                                    <i class="slider-search__icon ti-search"></i>
-                                </label>
-                                <input type="checkbox" name="" class="slider-search__checkbox-check" id="slider-search__checkbox">
-                                <ul class="slider-search__list">
-                                    <li class="slider-search__item">
-                                        <a href="" class="slider-search__item-link">Choose your Destination ...</a>
-                                    </li>
-                                    <li class="slider-search__item">
-                                        <a href="" class="slider-search__item-link">Europe</a>
-                                    </li>
-                                    <li class="slider-search__item">
-                                        <a href="" class="slider-search__item-link">- Italy</a>
-                                    </li>
-                                    <li class="slider-search__item">
-                                        <a href="" class="slider-search__item-link">- Netherlands</a>
-                                    </li>
-                                    <li class="slider-search__item">
-                                        <a href="" class="slider-search__item-link">Asia</a>
-                                    </li>
-                                    <li class="slider-search__item">
-                                        <a href="" class="slider-search__item-link">- Viet Nam</a>
-                                    </li>
-                                    <li class="slider-search__item">
-                                        <a href="" class="slider-search__item-link">United States</a>
-                                    </li>
-                                    <li class="slider-search__item">
-                                        <a href="" class="slider-search__item-link">Oceania</a>
-                                    </li>
-                                </ul>
-                                <label for="slider-search__checkbox" class="slider-overlay"></label>
+                <div class="slide-content">
+                    <div class="grid wide">
+                        <div class="slider">
+                            <div class="slider-main-title">
+                                <span class="slider-main-title__text">Search your next </span>
+                                <div class="slider-main-title__text-addition-container">
+                                    <div class="slider-main-title__text-addition-underline"></div>
+                                    <span class="slider-main-title__text-addition">Holiday</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slider-style">
-                            <div class="slider-style__item">
-                                <img src="./assets/img/slider__style-relax.png" alt="" class="slider-style__item-img">
-                                <span class="slider-style__item-text">RELAX</span>
+                            <div class="slider-sub-title">
+                                <span class="slider-sub-title__text">CHECK OUR BEST PROMOTIONS</span>
                             </div>
-                            <div class="slider-style__item">
-                                <img src="./assets/img/slider__style-cultural.png" alt="" class="slider-style__item-img">
-                                <span class="slider-style__item-text">CULTURAL</span>
+                            <div class="slider-search">
+                                <div class="slider-search__container">
+                                    <label for="slider-search__checkbox" class="slider-search__container-child">
+                                        <span class="slider-search__text">Choose your Destination ...</span>
+                                        <i class="slider-search__icon ti-search"></i>
+                                    </label>
+                                    <input type="checkbox" name="" class="slider-search__checkbox-check" id="slider-search__checkbox">
+                                    <ul class="slider-search__list">
+                                        <li class="slider-search__item">
+                                            <a href="" class="slider-search__item-link">Choose your Destination ...</a>
+                                        </li>
+                                        <li class="slider-search__item">
+                                            <a href="" class="slider-search__item-link">Europe</a>
+                                        </li>
+                                        <li class="slider-search__item">
+                                            <a href="" class="slider-search__item-link">- Italy</a>
+                                        </li>
+                                        <li class="slider-search__item">
+                                            <a href="" class="slider-search__item-link">- Netherlands</a>
+                                        </li>
+                                        <li class="slider-search__item">
+                                            <a href="" class="slider-search__item-link">Asia</a>
+                                        </li>
+                                        <li class="slider-search__item">
+                                            <a href="" class="slider-search__item-link">- Viet Nam</a>
+                                        </li>
+                                        <li class="slider-search__item">
+                                            <a href="" class="slider-search__item-link">United States</a>
+                                        </li>
+                                        <li class="slider-search__item">
+                                            <a href="" class="slider-search__item-link">Oceania</a>
+                                        </li>
+                                    </ul>
+                                    <label for="slider-search__checkbox" class="slider-overlay"></label>
+                                </div>
                             </div>
-                            <div class="slider-style__item">
-                                <img src="./assets/img/slider__style-sport.png" alt="" class="slider-style__item-img">
-                                <span class="slider-style__item-text">SPORT</span>
-                            </div>
-                            <div class="slider-style__item">
-                                <img src="./assets/img/slider__style-history.png" class="slider-style__item-img">
-                                <span class="slider-style__item-text">HISTORY</span>
+                            <div class="slider-style">
+                                <div class="slider-style__item">
+                                    <img src="./assets/img/slider__style-relax.png" alt="" class="slider-style__item-img">
+                                    <span class="slider-style__item-text">RELAX</span>
+                                </div>
+                                <div class="slider-style__item">
+                                    <img src="./assets/img/slider__style-cultural.png" alt="" class="slider-style__item-img">
+                                    <span class="slider-style__item-text">CULTURAL</span>
+                                </div>
+                                <div class="slider-style__item">
+                                    <img src="./assets/img/slider__style-sport.png" alt="" class="slider-style__item-img">
+                                    <span class="slider-style__item-text">SPORT</span>
+                                </div>
+                                <div class="slider-style__item">
+                                    <img src="./assets/img/slider__style-history.png" class="slider-style__item-img">
+                                    <span class="slider-style__item-text">HISTORY</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -496,17 +641,17 @@
     
         <!-- Body -->
         <div class="body">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="destination">
-                    <div class="grid__row">
+                    <div class="row">
                         <div class="destination__title">
                             <span class="destination__title-sub">OUR PROPOSALS</span>
                             <span class="destination__title-main">OUR DESTINATIONS</span>
                         </div>
                     </div>
     
-                    <ul class="grid__row">
-                        <li class="grid__column-4 destination-child">
+                    <ul class="row">
+                        <li class="col l-4 m-12 c-12 destination-child">
                             <div class="destination-container">
                                 <div style="background-image: url(./assets/img/destination-1.jpg);" class="destination-item__background">
                                     <div class="destination-item">
@@ -542,7 +687,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="grid__column-4 destination-child">
+                        <li class="col l-4 m-12 c-12 destination-child">
                             <div class="destination-container">
                                 <div style="background-image: url(./assets/img/destination-2.jpg);" class="destination-item__background">
                                     <div class="destination-item">
@@ -572,7 +717,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="grid__column-4 destination-child">
+                        <li class="col l-4 m-12 c-12 destination-child">
                             <div class="destination-container">
                                 <div style="background-image: url(./assets/img/destination-3.jpg);" class="destination-item__background">
                                     <div class="destination-item">
@@ -605,7 +750,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="grid__column-4 destination-child">
+                        <li class="col l-4 m-12 c-12 destination-child">
                             <div class="destination-container">
                                 <div style="background-image: url(./assets/img/destination-4.jpg);" class="destination-item__background">
                                     <div class="destination-item">
@@ -635,7 +780,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="grid__column-4 destination-child">
+                        <li class="col l-4 m-12 c-12 destination-child">
                             <div class="destination-container">
                                 <div style="background-image: url(./assets/img/destination-5.jpg);" class="destination-item__background">
                                     <div class="destination-item">
@@ -665,7 +810,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="grid__column-4 destination-child">
+                        <li class="col l-4 m-12 c-12 destination-child">
                             <div class="destination-container">
                                 <div style="background-image: url(./assets/img/destination-6.jpg);" class="destination-item__background">
                                     <div class="destination-item">
@@ -702,14 +847,14 @@
             <div class="banner">
                 <div class="banner__background">
                     <img src="./assets/img/background-sub.jpg" alt="" class="banner__background-img">
-
+                    
                     <div class="banner__container">
                         <div class="banner__sentence">
                             <span class="banner__sentence-text-1">
-                                Your
+                                Your Next
                             </span>
                             <span class="banner__sentence-text-2">
-                                Next Holiday
+                                Holiday
                             </span>
                         </div>
                         <div class="btn banner__btn">
@@ -719,9 +864,9 @@
                 </div>
             </div>
             <div class="highlight">
-                <div class="grid">
-                    <div class="grid__row">
-                        <div class="grid__column-4">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-4 m-12 c-12">
                             <div class="highlight-description">
                                 <div class="highlight-description__area">
                                     <span class="highlight-description__area-text">NORTH AMERICA</span>
@@ -753,7 +898,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-8">
+                        <div class="col l-8 m-12 c-12">
                             <div class="highlight__background">
                                 <div class="highlight-photo">
                                     <img src="./assets/img/highlight1.jpg" alt="" class="highlight-photo__img highlight-photo__img-1">
@@ -810,9 +955,9 @@
                 </div>
             </div>
             <div class="tour-style">
-                <div class="grid">
-                    <div class="grid__row">
-                        <div class="grid__column-4">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-4 m-12 c-12">
                             <div class="tour-style__item">
                                 <div class="tour-style__item-img">
                                     <img src="./assets/img/tour_style_icon1.png" alt="" class="tour-style__item-img-icon">
@@ -824,7 +969,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-4">
+                        <div class="col l-4 m-12 c-12">
                             <div class="tour-style__item">
                                 <div class="tour-style__item-img">
                                     <img src="./assets/img/tour_style_icon2.png" alt="" class="tour-style__item-img-icon">
@@ -836,7 +981,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-4">
+                        <div class="col l-4 m-12 c-12">
                             <div class="tour-style__item">
                                 <div class="tour-style__item-img">
                                     <img src="./assets/img/tour_style_icon3.png" alt="" class="tour-style__item-img-icon">
@@ -852,39 +997,42 @@
                 </div>
             </div>
             <div class="discover">
-                <div class="grid__row discover-container">
-                    <div class="grid__half-width">
-                        <div class="discover__item">
-                            <img src="./assets/img/discover1.jpg" alt="" class="discover__item-background">
-                            <div class="discover__item-content">
-                                <span class="discover__item-text-sub">01. LAST MINUTE</span>
-                                <span class="discover__item-text-main">Discover Cities</span>
-                                <div class="btn discover__item-btn">DETAILS</div>
+                <div class="grid">
+                    <div class="row discover-container">
+                        <div style="padding: unset;" class="col l-6 m-12 c-12">
+                            <div class="discover__item">
+                                <img src="./assets/img/discover1.jpg" alt="" class="discover__item-background">
+                                <div class="discover__item-content">
+                                    <span class="discover__item-text-sub">01. LAST MINUTE</span>
+                                    <span class="discover__item-text-main">Discover Cities</span>
+                                    <div class="btn discover__item-btn">DETAILS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: unset;" class="col l-6 m-12 c-12">
+                            <div class="discover__item">
+                                <img src="./assets/img/discover2.jpg" alt="" class="discover__item-background">
+                                <div class="discover__item-content">
+                                    <span class="discover__item-text-sub">01. LAST MINUTE</span>
+                                    <span class="discover__item-text-main">Discover Cities</span>
+                                    <div style="color: #7ab0aa;" class="btn discover__item-btn">DETAILS</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid__half-width">
-                        <div class="discover__item">
-                            <img src="./assets/img/discover2.jpg" alt="" class="discover__item-background">
-                            <div class="discover__item-content">
-                                <span class="discover__item-text-sub">01. LAST MINUTE</span>
-                                <span class="discover__item-text-main">Discover Cities</span>
-                                <div style="color: #7ab0aa;" class="btn discover__item-btn">DETAILS</div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="package">
-                <div class="grid">
-                    <div class="grid__row">
+                <div class="grid wide">
+                    <div class="row">
                         <div class="package__title">
                             <span class="package__title-sub">PROMOTIONS</span>
                             <span class="package__title-main">OUR PACKAGES</span>
                         </div>
                     </div>
-                    <div class="grid__row">
-                        <div class="grid__column-4">
+                    <div class="row">
+                        <div class="col l-4 m-12 c-12">
                             <div class="package__item">
                                 <div class="package__item-img">
                                     <img src="./assets/img/package1.jpg" alt="" class="package__item-img-background">
@@ -923,7 +1071,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-4">
+                        <div class="col l-4 m-12 c-12">
                             <div class="package__item">
                                 <div class="package__item-img">
                                     <img src="./assets/img/package2.jpg" alt="" class="package__item-img-background">
@@ -962,7 +1110,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-4">
+                        <div class="col l-4 m-12 c-12">
                             <div class="package__item">
                                 <div class="package__item-img">
                                     <img src="./assets/img/package3.jpg" alt="" class="package__item-img-background">
@@ -1008,8 +1156,8 @@
         
         <!-- footer -->
         <div style="background-image: url(./assets/img/footer-background.jpg);" class="footer">
-            <div class="grid">
-                <div class="grid__row footer-with-search-container">
+            <div class="grid wide">
+                <div class="row footer-with-search-container">
                     <div class="footer-with-search">
                         <div class="footer-with-search__text">
                             <span class="footer-with-search__text-sub">KEEP IN TOUCH</span>
@@ -1021,7 +1169,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid__row">
+                <div class="row">
                     <div class="grid__full-width">
                         <div class="footer-container">
                             <div class="footer-social">
@@ -1123,7 +1271,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid__row">
+                <div class="row">
                     <div class="grid__full-width">
                         <div class="copyright">
                             <span class="copyright-text">THE BEST WORDPRESS TRAVEL THEME</span>
@@ -1133,7 +1281,7 @@
                 </div>
             </div>
         </div>
-        <div class="buy">
+        <div class="buy hide-on-tablet-mobile">
             <div class="buy-main">54</div>
             <div class="buy-sub">
                 <i class="fas fa-fire buy-sub-icon"></i>
