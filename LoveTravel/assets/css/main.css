@@ -2,8 +2,7 @@
     overflow: hidden;
 }
 
-.header {
-}
+
 
 .background {
     position: relative;
@@ -64,6 +63,29 @@
     padding:0 18px;
     font-size: 1.4rem;
     letter-spacing: 2px;
+}
+
+.navbar__option-sign-in {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+.navbar__option-sign-in:hover {
+    opacity: 0.9;
+}
+
+.navbar__option-sign-in-text {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
 }
 
 .navbar__option {
@@ -380,6 +402,63 @@
     letter-spacing: 2px;
 }
 
+/* navbar user */
+.navbar-user {
+    margin-left: 42px;
+    position: relative;
+}
+
+.navbar-user__img {
+    height: 36px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.navbar-user:hover .navbar-user__list {
+    display: block;
+}
+
+.navbar-user__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    background-color: white;
+    width: 120px;
+    box-shadow: 0px 2px 2px #b3b0b0;
+    z-index: 1;
+}
+
+.navbar-user__list::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    height: 34px;
+}
+
+.navbar-user__item-link {
+    padding: 16px;
+    display: block;
+}
+
+.navbar-user__item-link--red {
+    color: #f76570;
+}
+
+.navbar-user__item-link:hover {
+    background-color: #f8f3ef;
+}
+
+.navbar-user__item-link:first-child {
+    border-bottom: 1px solid #ddd1d1;
+}
+
+
 
 /* Slider */
 
@@ -414,6 +493,7 @@
 .slider-main-title__text-addition-container {
     display: inline-block;
     position: relative;
+    margin-left: 8px;
 }
 
 
@@ -577,8 +657,7 @@
 /* ---------------- Body------------- */
 
 /* Destination */
-.destination {
-}
+
 
 .destination__title {
     display: flex;
@@ -1289,6 +1368,19 @@
     max-width: 100px;
 }
 
+.addcart-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addcart-quantity {
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #a79a93;
+    outline: none;
+    height: 30px;
+}
+
 /* Buy (fixed) */
 .buy {
     cursor: pointer;
@@ -1509,3 +1601,5 @@
     font-size: 1.2rem;
     letter-spacing: 2px;
 }
+
+
