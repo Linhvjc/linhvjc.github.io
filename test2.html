@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đọc dữ liệu từ Firebase Realtime Database</title>
+    
+
+</head>
+
+<body>
+    <span id="item1"></span>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+            import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAfiZKrUsaLQZ65V07eju3v9hpu-b793KU",
+            authDomain: "web-hoa-bf904.firebaseapp.com",
+            projectId: "web-hoa-bf904",
+            storageBucket: "web-hoa-bf904.appspot.com",
+            messagingSenderId: "864465001216",
+            appId: "1:864465001216:web:5c0434aaf2cfababbe31e5",
+            measurementId: "G-9EHBCMP56B"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Lấy dữ liệu từ Firebase Realtime Database và đưa nó vào thẻ HTML
+            const item1 = document.getElementById("item1");
+            const itemRef = ref(database, "item1");
+            onValue(itemRef, (snapshot) => {
+                const data = snapshot.val();
+                item1.innerText = data;
+            });
+    </script>
+</body>
+
+</html>
